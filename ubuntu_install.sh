@@ -4,7 +4,7 @@
 
 echo "Starting..."
 
-sudo apt-get update
+sudo apt-get --asume-yes update
 
 echo "Installing curl..."
 
@@ -14,7 +14,7 @@ echo "Done with curl."
 
 echo "Installing vim..."
 
-sudo apt install vim
+sudo apt --asume-yes install vim
 
 echo "Done with vim."
 
@@ -60,7 +60,7 @@ echo "Done with snap"
 
 echo "Installing git and aliases..."
 
-sudo apt install git
+sudo apt --asume-yes install git
 
 git config --global alias.co checkout
 git config --global alias.br branch
