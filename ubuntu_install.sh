@@ -37,7 +37,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 echo "Done with Docker Compose."
 
-echo "Installing node.js 9..."
+echo "Installing node.js 10..."
 
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
