@@ -74,6 +74,10 @@ echo "installing tree..."
 sudo apt install tree
 echo "done with tree."
 
+echo "installing Terminator..."
+sudo apt install terminator
+echo "done with Terminator."
+
 echo "Formatting command prompt..."
 
  #"Manually set this in ~/.bashrc file: PS1='\w > ':
