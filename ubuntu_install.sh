@@ -92,8 +92,10 @@ echo "alias explorer='xdg-open'" >> ~/.bash_aliases
 echo "alias testchrome='docker-compose -f docker-compose.chrome.yml up --build --abort-on-container-exit'" >> ~/.bash_aliases
 echo "alias testfirefox='docker-compose -f docker-compose.firefox.yml up --build --abort-on-container-exit'" >> ~/.bash_aliases
 echo "alias treenode='tree -I \'\node_modules\'\'" >> ~/.bash_aliases
-
+echo "alias dockprune='dockcprune && dockiprune && docknprune && docker ps -a'" >> ~/.bash_aliases
+echo "alias explorer='xdg-open'" >> ~/.bash_aliases
 echo "source ~/git-prompt.sh" >> ~/.bashrc
+
 echo "download bash/zsh git prompt support by David Xu on github and place following line below previous line"
 #echo "export PROMPT_COMMAND='__posh_git_ps1 "\[\e[0;33m\]\W>" " \[\e[1;34m\]\[\e[0m\]";'$PROMPT_COMMAND" >> ~/.bashrc
 
