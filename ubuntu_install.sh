@@ -107,6 +107,10 @@ echo ". ~/.bashrc"
 echo "alias"
 echo "done with aliases"
 
+echo "Setting .vimrc settings..."
+echo "set number" >> ~/.vimrc
+echo "Done with .vimrc settings."
+
 echo "Installing webstorm..."
 sudo snap install webstorm --classic
 echo "Done with webstorm."
