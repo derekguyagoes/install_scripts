@@ -4,7 +4,7 @@
 
 echo "Starting..."
 
-sudo apt-get --asume-yes update
+sudo apt-get --assume-yes update
 
 echo "Installing curl..."
 
@@ -14,7 +14,7 @@ echo "Done with curl."
 
 echo "Installing vim..."
 
-sudo apt --asume-yes install vim
+sudo apt --assume-yes install vim
 
 echo "Done with vim."
 
@@ -60,7 +60,7 @@ echo "Done with snap"
 
 echo "Installing git and aliases..."
 
-sudo apt --asume-yes install git
+sudo apt --assume-yes install git
 
 git config --global alias.co checkout
 git config --global alias.br branch
@@ -101,7 +101,7 @@ echo "alias explorer='xdg-open'" >> ~/.bash_aliases
 echo "source ~/git-prompt.sh" >> ~/.bashrc
 
 echo "download bash/zsh git prompt support by David Xu on github and place following line below previous line"
-#echo "export PROMPT_COMMAND='__posh_git_ps1 "\[\e[0;33m\]\W>" " \[\e[1;34m\]\[\e[0m\]";'$PROMPT_COMMAND" >> ~/.bashrc
+echo "export PROMPT_COMMAND='__posh_git_ps1 "\[\e[0;33m\]\W>" " \[\e[1;34m\]\[\e[0m\]";'$PROMPT_COMMAND" >> ~/.bashrc
 
 echo ". ~/.bashrc"
 echo "alias"
@@ -116,6 +116,7 @@ sudo snap install webstorm --classic
 echo "Done with webstorm."
 
 #echo "Installing VS Code..."
+sudo snap install vscode --classic
 #echo "Done with VS code."
 
 #echo "Installing chrome..."
