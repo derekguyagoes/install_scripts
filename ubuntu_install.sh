@@ -44,6 +44,12 @@ sudo apt-get install -y nodejs
 
 echo "Done with node."
 
+echo "Installing npm packages..."
+
+sudo npm install -g prettier create-react-app
+
+echo "Done with npm packages."
+
 echo "Installing yarn..."
 
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
