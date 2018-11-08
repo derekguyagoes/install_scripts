@@ -37,6 +37,13 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 echo "Done with Docker Compose."
 
+echo "Formatting docker output..."
+
+mkdir ~/.docker && echo " {"psFormat":"table {{.ID}}\\t{{.Image}}\\t{{.Status}}\\t{{.Names}}"}
+" >> ~/.docker/config.json
+
+echo "Done formatting output."
+
 echo "Installing node.js 10..."
 
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
