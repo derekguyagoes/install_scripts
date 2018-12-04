@@ -106,7 +106,7 @@ echo "alias dockcprune='docker container prune -f'" >> ~/.bash_aliases
 echo "alias dockiprune='docker image prune -f'" >> ~/.bash_aliases
 echo "alias docknprune='docker network prune -f'" >> ~/.bash_aliases
 echo "alias explorer='xdg-open'" >> ~/.bash_aliases
-echo "alias dockupdev='docker-compose -f docker-compose.dev.yml down && dock-compose -f docker-compose.dev.yml up'" >> ~/.bash_aliases
+echo "alias dockupdev='docker-compose -f docker-compose.dev.yml down && docker-compose -f docker-compose.dev.yml up'" >> ~/.bash_aliases
 echo "alias treenode='tree -I \'\node_modules\'\'" >> ~/.bash_aliases
 echo "alias dockprune='dockcprune && dockiprune && docknprune && docker ps -a'" >> ~/.bash_aliases
 echo "source ~/git-prompt.sh" >> ~/.bashrc
