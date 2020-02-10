@@ -57,14 +57,6 @@ sudo npm install -g prettier create-react-app
 
 echo "Done with npm packages."
 
-echo "Installing yarn..."
-
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt-get update && sudo apt-get install yarn
-
-echo "Done with yarn."
-
 echo "Installing snap..."
 
 sudo apt install snap
@@ -109,10 +101,6 @@ echo "alias explorer='xdg-open'" >> ~/.bash_aliases
 echo "alias dockupdev='docker-compose -f docker-compose.dev.yml down && docker-compose -f docker-compose.dev.yml up'" >> ~/.bash_aliases
 echo "alias treenode='tree -I \'\node_modules\'\'" >> ~/.bash_aliases
 echo "alias dockprune='dockcprune && dockiprune && docknprune && docker ps -a'" >> ~/.bash_aliases
-echo "source ~/git-prompt.sh" >> ~/.bashrc
-
-echo "download bash/zsh git prompt support by David Xu on github and place following line below previous line"
-echo "export PROMPT_COMMAND='__posh_git_ps1 "\[\e[0;33m\]\W>" " \[\e[1;34m\]\[\e[0m\]";'$PROMPT_COMMAND" >> ~/.bashrc
 
 echo ". ~/.bashrc"
 echo "alias"
@@ -122,15 +110,21 @@ echo "Setting .vimrc settings..."
 echo "set number" >> ~/.vimrc
 echo "Done with .vimrc settings."
 
-echo "Installing webstorm..."
-sudo snap install webstorm --classic
-echo "Done with webstorm."
+echo "Install zsh and prereqs"
+sudo apt install -y zsh
+sudo apt-get install -y powerline fonts-powerline
+echo "done installing zsh"
 
-#echo "Installing VS Code..."
-sudo snap install vscode --classic
-#echo "Done with VS code."
+echo "Installing oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo "done with oh my"
 
-#echo "Installing chrome..."
-## echo "Done with chrome..."
+# echo "Installing webstorm..."
+# sudo snap install webstorm --classic
+# echo "Done with webstorm."
+
+echo "Installing VS Code..."
+sudo snap install code --classic
+echo "Done with VS code."
 
 echo "A reboot is suggested."
